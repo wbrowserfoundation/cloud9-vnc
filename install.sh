@@ -4,7 +4,11 @@
 # Redirect stdout to null
 install_prerequisites() {
     sudo apt-get update
-    sudo apt-get install -y supervisor xvfb fluxbox x11vnc websockify firefox
+    sudo apt-get install -y supervisor xvfb fluxbox x11vnc websockify firefox thunar
+    sudo add-apt-repository ppa:webupd8team/java
+    sudo apt-get update
+    sudo apt-get install oracle-java8-installer
+    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 }
 
 
